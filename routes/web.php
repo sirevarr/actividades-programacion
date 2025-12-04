@@ -8,3 +8,4 @@ Route::get('/', function () {
 });
 
 Route::resource('students', StudentController::class);
+Route::resource('categories', App\Http\Controllers\CategoryController::class);
