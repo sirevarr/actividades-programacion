@@ -14,3 +14,4 @@ Route::group(['prefix' => 'productos'], function () {
 });
 Route::resource('tasks', App\Http\Controllers\TaskController::class);
 Route::get('/inventories/search', [App\Http\Controllers\InventoryController::class, 'search'])->name('inventories.search');
+Route::get('/reports/{report}/export', [App\Http\Controllers\ReportController::class, 'export'])->name('reports.export');
