@@ -39,6 +39,8 @@
                 <td>{{ $task->estado }}</td>
                 <td>{{ $task->fecha_vencimiento }}</td>
                 <td>
+                    <a href="{{ route('tasks.show', $task) }}" class="btn btn-primary">Ver</a>
+                    <a href="{{ route('tasks.edit', $task) }}" class="btn btn-primary">Editar</a>
                     <form action="{{ route('tasks.destroy', $task) }}" method="POST" style="display:inline;">
                         @csrf
                         @method('DELETE')
